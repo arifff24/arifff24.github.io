@@ -40,6 +40,43 @@ header {
     object-fit: cover; /* Menjaga proporsi video tetap benar */
     z-index: -1; /* Video di belakang konten */
 }
+/* Untuk layar HP (lebih kecil dari 768px) */
+@media (max-width: 768px) {
+    header {
+        height: 30vh; /* Kurangi tinggi header untuk layar kecil */
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Kurangi ukuran font untuk judul */
+    }
+
+    #headerVideo {
+        height: 30vh; /* Pastikan video juga menyesuaikan tinggi */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Ubah ukuran font navigasi */
+    }
+}
+
+/* Untuk layar tablet (lebih kecil dari 1024px tetapi lebih besar dari HP) */
+@media (max-width: 1024px) {
+    header {
+        height: 40vh; /* Kurangi sedikit tinggi header untuk tablet */
+    }
+
+    header h1 {
+        font-size: 2.5rem; /* Sesuaikan ukuran font */
+    }
+
+    #headerVideo {
+        height: 40vh; /* Pastikan video juga menyesuaikan tinggi */
+    }
+
+    nav ul li a {
+        font-size: 1.1rem; /* Sedikit lebih besar dari HP */
+    }
+}
 
 header h1 {
     margin: -20px 0 0 0; /* Moves the h1 upwards */
