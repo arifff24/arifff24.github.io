@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pengembangan Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <video autoplay muted loop id="headerVideo">
+            <source src="wallpaper/gerakwallpaper (1).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>Welcome to ryfegallery</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#chill-area">Chill Area</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Home</h2>
+        <div class="center-text">
+            <p>Ini adalah halaman utama dari website kami yang menawarkan berbagai layanan untuk kebutuhan bisnis Anda.</p>
+            <button onclick="alert('Terima kasih telah mengunjungi!')">Klik untuk Pesan</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="center">
+            <img src="img/team.jpg" alt="Tim Kami" width="500" class="fade-image">
+        </div>
+        <p>Kami adalah tim profesional yang berdedikasi untuk menyediakan layanan terbaik dan solusi inovatif bagi bisnis anda. Dengan pengalaman dan keahlian kami, kami siap membantu apapun keperluan anda. Kami selalu menyediakan inovasi, layanan, serta keterbaharuan yang terbaik untuk anda.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Pengembangan Website</li>
+            <li>Desain Grafis</li>
+            <li>Manajemen Sosial Media</li>
+        </ul>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <img src="img/project1.jpg" alt="Proyek 1" width="200" onclick="openFullscreen(this)">
+        <img src="img/project2.jpg" alt="Proyek 2" width="200" onclick="openFullscreen(this)">
+        <img src="img/project3.jpg" alt="Proyek 3" width="200" onclick="openFullscreen(this)">
+        <img src="img/project4.jpg" alt="Proyek 4" width="200" onclick="openFullscreen(this)">
+        <img src="img/project5.png" alt="Proyek 5" width="200" onclick="openFullscreen(this)">
+        <p>Klik Gambar untuk memperbesar.</p>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Layanan</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pengembangan Website</td>
+                    <td>Rp 500.000</td>
+                </tr>
+                <tr>
+                    <td>Desain Grafis</td>
+                    <td>Rp 250.000</td>
+                </tr>
+                <tr>
+                    <td>Manajemen Sosial Media</td>
+                    <td>Rp 300.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Nama:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Pesan:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <input type="submit" value="Kirim">
+        </form>
+    </section>
+
+    <section id="chill-area">
+        <h2>Chill Area</h2>
+        <iframe width="400" height="300" src="https://www.youtube.com/embed/jfKfPfyJRdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="400" height="300" src="https://www.youtube.com/embed/Na0w3Mz46GA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="400" height="300" src="https://www.youtube.com/embed/J2i0cZWCdq4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Website Kami. All rights reserved.</p>
+    </footer>
+</body>
+</html>

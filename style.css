@@ -1,0 +1,326 @@
+/* Atur Font dan Latar Belakang */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+* Mengatur agar margin dan padding default dihilangkan */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    position: relative;
+    height: 50vh; /* Membatasi tinggi header */
+    width: 100%; /* Lebar penuh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden; /* Memotong elemen yang keluar dari header */
+}
+
+#headerVideo {
+    position: absolute;
+    top: 0;
+    left: 40%; /* Posisi horizontal di tengah */
+    transform: translateX(-40%); /* Menjaga video tetap di tengah */
+    width: 100%; /* Lebar lebih besar dari 100% untuk memberi ruang cropping */
+    height: 100%; /* Mengisi penuh tinggi header */
+    object-fit: cover; /* Menjaga proporsi video tetap benar */
+    z-index: -1; /* Video di belakang konten */
+}
+
+header h1 {
+    margin: -20px 0 0 0; /* Moves the h1 upwards */
+    font-size: 3rem;
+    letter-spacing: 1px;
+    z-index: 2; /* Keeps the text above the video */
+}
+
+/* Navigasi */
+nav {
+    margin-top: 20px;
+    z-index: 1; /* Navigasi di atas video */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Main content area */
+main {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Section Styling */
+section {
+    padding: 40px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Gallery Styling */
+section#gallery img {
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+section#gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Fullscreen Image */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form Styling */
+form {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    padding: 12px 30px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+button {
+    padding: 12px 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Image Animation */
+.fade-image {
+    animation: fadeEffect 7s infinite;
+}
+
+@keyframes fadeEffect {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+.youtube-container {
+    display: flex;
+    width: 400px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .youtube-thumbnail {
+    position: relative;
+    width: 100%;
+  }
+  
+  .youtube-thumbnail img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  .youtube-duration,
+  .live-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: #000;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0.85;
+  }
+  
+  .live-badge {
+    background-color: red;
+    font-weight: bold;
+  }
+  
+  .youtube-info {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .channel-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .video-details {
+    max-width: 300px;
+  }
+  
+  .video-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .channel-name,
+  .views-time {
+    color: #606060;
+    font-size: 14px;
+    margin: 2px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .verified-icon {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+  }
+  #chill-area iframe {
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
