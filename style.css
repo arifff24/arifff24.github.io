@@ -324,3 +324,87 @@ html {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+/* Responsif untuk perangkat seluler */
+@media (max-width: 768px) {
+    header {
+        height: 40vh; /* Sesuaikan tinggi header untuk perangkat kecil */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Kurangi ukuran font */
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    /* Memastikan gambar pada gallery responsif */
+    section#gallery img {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Tabel lebih mudah dibaca pada layar kecil */
+    table th, table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    /* Atur ulang elemen video YouTube */
+    #chill-area iframe {
+        width: 100%; /* Mengisi penuh lebar layar */
+        height: auto; /* Sesuaikan tinggi secara otomatis */
+    }
+
+    /* Margin dan padding dikurangi pada layar kecil */
+    section {
+        padding: 20px;
+        margin: 10px 0;
+    }
+
+    /* Form input lebih kecil */
+    input[type="text"], input[type="email"], textarea {
+        font-size: 0.9rem;
+    }
+
+    /* Tombol lebih kecil */
+    button, input[type="submit"] {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Responsif untuk perangkat tablet */
+@media (max-width: 1024px) {
+    header {
+        height: 45vh; /* Sesuaikan tinggi header untuk tablet */
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    #chill-area iframe {
+        width: 100%;
+        height: auto;
+    }
+}
