@@ -19,7 +19,7 @@ body, html {
 /* Header Styling - Seperti Banner */
 header {
     position: relative;
-    height: 30vh; /* Tinggi header lebih kecil seperti banner */
+    height: 35vh; /* Tinggi header lebih kecil seperti banner */
     width: 100%; /* Lebar penuh */
     display: flex;
     flex-direction: column;
