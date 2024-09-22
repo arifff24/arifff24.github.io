@@ -30,54 +30,83 @@ header {
     overflow: hidden; /* Memotong elemen yang keluar dari header */
 }
 
+/* Header Styling - Seperti Banner */
+header {
+    position: relative;
+    height: 30vh; /* Membatasi tinggi header menjadi seperti banner */
+    width: 100%; /* Lebar penuh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
 #headerVideo {
     position: absolute;
     top: 0;
-    left: 40%; /* Posisi horizontal di tengah */
-    transform: translateX(-40%); /* Menjaga video tetap di tengah */
-    width: 100%; /* Lebar lebih besar dari 100% untuk memberi ruang cropping */
-    height: 100%; /* Mengisi penuh tinggi header */
-    object-fit: cover; /* Menjaga proporsi video tetap benar */
-    z-index: -1; /* Video di belakang konten */
+    left: 50%;
+    transform: translateX(-50%); /* Menjaga video tetap di tengah */
+    width: 100%; /* Lebar penuh untuk mengisi seluruh header */
+    height: 100%; /* Menyesuaikan tinggi video dengan header */
+    object-fit: cover; /* Memastikan proporsi video tetap baik */
+    z-index: -1; /* Video berada di belakang konten */
 }
+
+header h1 {
+    font-size: 2rem; /* Sesuaikan ukuran font untuk ukuran banner */
+    letter-spacing: 1px;
+    z-index: 2; /* Pastikan teks berada di atas video */
+    margin: 0; /* Hilangkan margin tambahan */
+}
+
+nav ul li a {
+    font-size: 1rem; /* Sesuaikan ukuran font navigasi */
+    padding: 5px 10px; /* Sesuaikan padding untuk ukuran banner */
+}
+
+
 /* Untuk layar HP (lebih kecil dari 768px) */
 @media (max-width: 768px) {
     header {
-        height: 30vh; /* Kurangi tinggi header untuk layar kecil */
+        height: 15vh; /* Kurangi tinggi header lebih jauh untuk layar kecil */
     }
 
     header h1 {
-        font-size: 1.8rem; /* Kurangi ukuran font untuk judul */
+        font-size: 1.5rem; /* Ukuran font yang lebih kecil untuk judul */
     }
 
     #headerVideo {
-        height: 30vh; /* Pastikan video juga menyesuaikan tinggi */
+        height: 15vh; /* Sesuaikan tinggi video dengan tinggi header */
     }
 
     nav ul li a {
-        font-size: 0.9rem; /* Ubah ukuran font navigasi */
+        font-size: 0.9rem; /* Sesuaikan ukuran font navigasi */
+        padding: 5px 8px;
     }
 }
 
-/* Untuk layar tablet (lebih kecil dari 1024px tetapi lebih besar dari HP) */
+/* Untuk layar tablet (lebih kecil dari 1024px) */
 @media (max-width: 1024px) {
     header {
-        height: 40vh; /* Kurangi sedikit tinggi header untuk tablet */
+        height: 18vh; /* Kurangi tinggi header untuk tablet */
     }
 
     header h1 {
-        font-size: 2.5rem; /* Sesuaikan ukuran font */
+        font-size: 1.8rem; /* Ukuran font yang lebih kecil */
     }
 
     #headerVideo {
-        height: 40vh; /* Pastikan video juga menyesuaikan tinggi */
+        height: 18vh; /* Sesuaikan tinggi video dengan tinggi header */
     }
 
     nav ul li a {
-        font-size: 1.1rem; /* Sedikit lebih besar dari HP */
+        font-size: 1rem; /* Ukuran font untuk tablet */
+        padding: 5px 10px;
     }
 }
-
 header h1 {
     margin: -20px 0 0 0; /* Moves the h1 upwards */
     font-size: 3rem;
