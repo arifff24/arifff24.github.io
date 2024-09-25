@@ -233,49 +233,26 @@ footer p {
     font-size: 1rem;
 }
 .center {
-    display: grid;
-    place-items: center; /* Tempatkan gambar tepat di tengah grid */
-    height: 100vh; /* Tinggi penuh dari viewport */
     text-align: center;
-    gap: 5px; /* Mengurangi jarak antara elemen grid */
-}
-
-/* Memperhalus Gambar */
-.fade-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: brightness(90%);
-    margin-bottom: 5px; /* Mengurangi margin bawah gambar */
-}
-
-/* Efek saat hover untuk memperbesar gambar dengan transisi halus */
-.fade-image:hover {
-    transform: scale(1.05);
-    filter: brightness(100%);
-}
-
-/* Mengurangi jarak antara gambar dan teks */
-#about .center {
-    margin-bottom: 5px; /* Mengurangi margin bawah gambar */
-}
-
-#about p {
-    margin-top: 5px; /* Mengurangi margin atas teks */
-    line-height: 1.2; /* Mengurangi spasi antar baris teks jika diperlukan */
 }
 
 /* Image Animation */
 .fade-image {
     animation: fadeEffect 7s infinite;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Menambahkan transisi untuk efek halus */
+    border-radius: 10px; /* Garis halus pada ujung gambar */
 }
 
 @keyframes fadeEffect {
     0% { opacity: 0; }
     50% { opacity: 1; }
     100% { opacity: 0; }
+}
+
+/* Hover Effect */
+.fade-image:hover {
+    transform: scale(1.05); /* Memperbesar gambar sedikit saat di-hover */
+    opacity: 0.8; /* Mengurangi opacity sedikit saat di-hover */
 }
 
 
