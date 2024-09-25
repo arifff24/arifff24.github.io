@@ -241,6 +241,9 @@ footer p {
     animation: fadeEffect 7s infinite;
     transition: transform 0.3s ease, opacity 0.3s ease; /* Menambahkan transisi untuk efek halus */
     border-radius: 10px; /* Garis halus pada ujung gambar */
+    width: 100%; /* Default width untuk gambar */
+    max-width: 500px; /* Set batas maksimum lebar gambar */
+    height: auto; /* Pertahankan proporsi */
 }
 
 @keyframes fadeEffect {
@@ -255,6 +258,19 @@ footer p {
     opacity: 0.8; /* Mengurangi opacity sedikit saat di-hover */
 }
 
+/* Media Queries untuk Tablet */
+@media (max-width: 768px) {
+    .fade-image {
+        max-width: 300px; /* Ukuran maksimum gambar pada tablet */
+    }
+}
+
+/* Media Queries untuk Mobile */
+@media (max-width: 480px) {
+    .fade-image {
+        max-width: 200px; /* Ukuran maksimum gambar pada perangkat seluler */
+    }
+}
 
 /* Smooth Scroll */
 html {
