@@ -19,30 +19,28 @@ body, html {
 /* Header Styling - Seperti Banner */
 header {
     position: relative;
-    height: 35vh; /* Tinggi header lebih kecil seperti banner */
-    width: 100%; /* Lebar penuh */
+    height: 50vh; /* Tinggi header fullscreen (100% tinggi viewport) */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
     text-align: center;
-    overflow: hidden;
+    overflow: hidden; /* Batasi konten di dalam header */
 }
 
 #headerVideo {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Menjaga video tetap di tengah */
+    left: 0;
     width: 100%; /* Lebar penuh untuk mengisi seluruh header */
-    height: 100%; /* Menyesuaikan tinggi video dengan header */
-    object-fit: cover; /* Memastikan proporsi video tetap baik */
+    height: 100%; /* Tinggi penuh sesuai dengan header */
+    object-fit: cover; /* Memastikan video memenuhi header dan tetap proporsional */
     z-index: -1; /* Video berada di belakang konten */
 }
 
 header h1 {
-    font-size: 2.5rem; /* Ukuran font standar untuk banner */
+    font-size: 2.5rem; /* Ukuran font standar */
     letter-spacing: 1px;
     z-index: 2; /* Pastikan teks berada di atas video */
     margin: 0; /* Hilangkan margin tambahan */
@@ -50,49 +48,21 @@ header h1 {
 
 /* Navigasi */
 nav ul li a {
-    font-size: 1rem; /* Sesuaikan ukuran font navigasi */
+    font-size: 1rem; /* Ukuran font navigasi */
     padding: 8px 12px; /* Sesuaikan padding */
 }
 
-/* Untuk layar HP dan Tablet */
+/* Pada layar tablet dan HP */
 @media (max-width: 1024px) {
     header {
-        height: 15vh; /* Header lebih kecil untuk tablet dan hp */
-    }
-
-    header h1 {
-        font-size: 2rem; /* Ukuran font lebih kecil untuk tablet */
-    }
-
-    #headerVideo {
-        height: 15vh; /* Sesuaikan tinggi video dengan header */
-    }
-
-    nav ul li a {
-        font-size: 0.9rem; /* Ukuran font navigasi lebih kecil */
-        padding: 6px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Pusatkan konten secara vertikal */
+        align-items: center; /* Pusatkan konten secara horizontal */
     }
 }
 
-/* Untuk layar HP (lebih kecil dari 768px) */
-@media (max-width: 768px) {
-    header {
-        height: 12vh; /* Header lebih kecil untuk perangkat HP */
-    }
-
-    header h1 {
-        font-size: 1.8rem; /* Ukuran font lebih kecil untuk HP */
-    }
-
-    #headerVideo {
-        height: 12vh; /* Sesuaikan tinggi video dengan header */
-    }
-
-    nav ul li a {
-        font-size: 0.8rem; /* Font navigasi lebih kecil untuk HP */
-        padding: 5px 8px;
-    }
-}
+/* Navigasi */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -249,7 +219,7 @@ button:hover {
 
 /* Footer Styling */
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -262,9 +232,39 @@ footer p {
     margin: 0;
     font-size: 1rem;
 }
-
 .center {
+    display: grid;
+    place-items: center; /* Tempatkan gambar tepat di tengah grid */
+    height: 100vh; /* Tinggi penuh dari viewport */
     text-align: center;
+    gap: 5px; /* Mengurangi jarak antara elemen grid */
+}
+
+/* Memperhalus Gambar */
+.fade-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(90%);
+    margin-bottom: 5px; /* Mengurangi margin bawah gambar */
+}
+
+/* Efek saat hover untuk memperbesar gambar dengan transisi halus */
+.fade-image:hover {
+    transform: scale(1.05);
+    filter: brightness(100%);
+}
+
+/* Mengurangi jarak antara gambar dan teks */
+#about .center {
+    margin-bottom: 5px; /* Mengurangi margin bawah gambar */
+}
+
+#about p {
+    margin-top: 5px; /* Mengurangi margin atas teks */
+    line-height: 1.2; /* Mengurangi spasi antar baris teks jika diperlukan */
 }
 
 /* Image Animation */
@@ -277,6 +277,7 @@ footer p {
     50% { opacity: 1; }
     100% { opacity: 0; }
 }
+
 
 /* Smooth Scroll */
 html {
@@ -446,4 +447,14 @@ html {
         width: 100%;
         height: auto;
     }
+}
+.social-icons a {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
 }
